@@ -20,8 +20,8 @@ namespace TicTacToe
         private readonly Dictionary<Player, ImageSource> imageSources =
             new Dictionary<Player, ImageSource>
         {
-            {Player.X, new BitmapImage(new Uri("Assets/X.png")) },
-            {Player.O, new BitmapImage(new Uri("Assets/O.png")) },
+            {Player.X, new BitmapImage(new Uri("Assets/X.png", UriKind.Relative)) },
+            {Player.O, new BitmapImage(new Uri("Assets/O.png", UriKind.Relative)) },
         };
 
         private readonly Image[,] imageControls = new Image[3, 3];
@@ -57,6 +57,7 @@ namespace TicTacToe
         }
         private void TransitionToGameScreen()
         {
+            Line.Visibility = Visibility.Hidden;
             EndScreen.Visibility = Visibility.Hidden;
             TurnPanel.Visibility = Visibility.Visible;
             GameCanvas.Visibility = Visibility.Visible;
@@ -102,7 +103,6 @@ namespace TicTacToe
         }
         private async void OnGameEnded(GameResult gameResult)
         {
-            await Task.Delay(1000);
             if (gameResult.Winner == Player.None)
             {
                 TransitionToEndScreen("Ничья", null);
@@ -110,6 +110,7 @@ namespace TicTacToe
             else
             {
                 ShowLine(gameResult.WinInfo);
+                await Task.Delay(1000);
                 TransitionToEndScreen("Победа: ", imageSources[gameResult.Winner]);
             }
         }
