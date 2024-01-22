@@ -17,7 +17,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <TextBlock FontSize="54"
-                       Text="Player: "
+                       Text="Ход: "
                        Margin="0,0,0,15"/>
             <Image x:Name="PlayerImage"
                    Source="Assets/X.png"
@@ -54,7 +54,7 @@
                             HorizontalAlignment="Center">
                     <TextBlock x:Name="ResultText"
                                FontSize="54"
-                               Text="Winner: "
+                               Text="Победа: "
                                Margin="0,0,0,15"/>
                     <Image x:Name="WinnerImage"
                            Height="75"

@@ -13,3 +13,4 @@ C:\Users\admin\source\repos\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResourc
 C:\Users\admin\source\repos\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\admin\source\repos\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\admin\source\repos\TicTacToe\obj\Debug\App.baml
